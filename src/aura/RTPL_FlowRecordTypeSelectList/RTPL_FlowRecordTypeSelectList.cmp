@@ -1,0 +1,59 @@
+<!-- 
+Copyright 2018 OpFocus, Inc
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<aura:component implements="lightning:availableForFlowScreens">
+
+	<aura:attribute name="addSelectOpt" type="Boolean" default="true"/>
+	<aura:attribute name="sobject" type="String"/>
+	<aura:attribute name="recordTypeId" type="String"/>
+	<aura:attribute name="recordTypeName" type="String"/>
+
+
+	<aura:attribute name="controllingFieldName" type="String"/>
+	<aura:attribute name="controllingFieldSize" type="String"/>
+	<aura:attribute name="controllingFieldLabel" type="String"/>
+	<aura:attribute name="controllingFieldValue" type="String"/>
+	<aura:attribute name="controllingFieldRequired" type="Boolean"/>
+
+	<aura:attribute name="dependentfieldName1" type="String"/>
+	<aura:attribute name="dependentfieldLabel1" type="String"/>
+	<aura:attribute name="dependentfieldValue1" type="String"/>
+	<aura:attribute name="dependentfieldSize1" type="String"/>
+	<aura:attribute name="dependentfieldRequired1" type="Boolean"/>
+
+	<aura:attribute name="dependentfieldName2" type="String"/>
+	<aura:attribute name="dependentfieldLabel2" type="String"/>
+	<aura:attribute name="dependentfieldValue2" type="String"/>
+	<aura:attribute name="dependentfieldSize2" type="String"/>
+	<aura:attribute name="dependentfieldRequired2" type="Boolean"/>
+
+	<aura:attribute name="dependentfieldName3" type="String"/>
+	<aura:attribute name="dependentfieldLabel3" type="String"/>
+	<aura:attribute name="dependentfieldValue3" type="String"/>
+	<aura:attribute name="dependentfieldSize3" type="String"/>
+	<aura:attribute name="dependentfieldRequired3" type="Boolean"/>
+
+	<aura:attribute name="dependentfieldName4" type="String"/>
+	<aura:attribute name="dependentfieldLabel4" type="String"/>
+	<aura:attribute name="dependentfieldValue4" type="String"/>
+	<aura:attribute name="dependentfieldSize4" type="String"/>
+	<aura:attribute name="dependentfieldRequired4" type="Boolean"/>
+
+	<aura:handler name="init" action="{!c.init}" value="{!this}"/>
+
+
+	<div aura:id="pl_container"/>
+</aura:component>

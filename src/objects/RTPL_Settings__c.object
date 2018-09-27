@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Api_Version__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The User Interface API version</inlineHelpText>
+        <label>Api Version</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Named_Credential__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of the named credential</inlineHelpText>
+        <label>Named Credential</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>RTPL Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

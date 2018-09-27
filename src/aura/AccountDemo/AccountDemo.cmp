@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="acct1" type="Account" default="{'sobjectType':'Account'}"/>
+	<aura:attribute name="acct2" type="Account" default="{'sobjectType':'Account'}"/>
+
+	<aura:handler name="init" action="{!c.init}" value="{!this}"/>
+
+	<div class="slds-grid slds-wrap">
+		<div class="slds-size_1-of-2">
+			<lightning:layout multipleRows="true">
+				<lightning:layoutItem padding="around-small" size="6">
+					<c:RTPL_RecordTypeSelectList aura:id="plid" sobjectField="Account.Controller__c" recordTypeName="Standard" label="Standard Control" value="{!v.acct1.Controller__c}" required="true"/>
+				</lightning:layoutItem>
+				<lightning:layoutItem padding="around-small" size="6">
+					<c:RTPL_RecordTypeSelectList sobject="Account" recordTypeName="Standard" fieldName="Dependent__c" depends="{!v.acct1.Controller__c}" value="{!v.acct1.Dependent__c}" label="Standard Depend" onchange="{!c.changed}"/>
+				</lightning:layoutItem>
+
+				<lightning:layoutItem padding="around-small" size="6">
+					<c:RTPL_RecordTypeSelectList sobjectField="Account.Controller__c" recordTypeId="0125A000000zUZWQA2" label="Custom Control" value="{!v.acct2.Controller__c}" />
+				</lightning:layoutItem>
+				<lightning:layoutItem padding="around-small" size="6">
+					<c:RTPL_RecordTypeSelectList sobjectField="Account.Dependent__c" recordTypeName="Custom" depends="{!v.acct2.Controller__c}" value="{!v.acct2.Dependent__c}" label="Custom Depend"/>
+				</lightning:layoutItem>
+			</lightning:layout>
+		</div>
+	</div>
+</aura:component>

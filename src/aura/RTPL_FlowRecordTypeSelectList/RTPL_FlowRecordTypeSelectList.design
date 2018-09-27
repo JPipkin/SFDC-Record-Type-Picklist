@@ -1,0 +1,36 @@
+<design:component>
+	<design:attribute name="addSelectOpt" label="Add --Select-- to picklist options"/>
+	<design:attribute name="sobject" label="SObject Api Name"/>
+	<design:attribute name="recordTypeId" label="Record Type Id"/>
+	<design:attribute name="recordTypeName" label="Record Type Name"/>
+
+
+	<design:attribute name="controllingFieldName" label="Control Field Api Name"/>
+	<design:attribute name="dependentfieldName1" label="Dependent Field 1 Api Name"/>
+	<design:attribute name="dependentfieldName2" label="Dependent Field 2 Api Name"/>
+	<design:attribute name="dependentfieldName3" label="Dependent Field 3 Api Name"/>
+	<design:attribute name="dependentfieldName4" label="Dependent Field 4 Api Name"/>
+	<design:attribute name="controllingFieldLabel" label="Control Field Label"/>
+	<design:attribute name="dependentfieldLabel1" label="Dependent Field 1 Label"/>
+	<design:attribute name="dependentfieldLabel2" label="Dependent Field 2 Label"/>
+	<design:attribute name="dependentfieldLabel3" label="Dependent Field 3 Label"/>
+	<design:attribute name="dependentfieldLabel4" label="Dependent Field 4 Label"/>
+	<design:attribute name="controllingFieldValue" label="Control Field Value"/>
+	<design:attribute name="dependentfieldValue1" label="Dependent Field 1 Value"/>
+	<design:attribute name="dependentfieldValue2" label="Dependent Field 2 Value"/>
+	<design:attribute name="dependentfieldValue3" label="Dependent Field 3 Value"/>
+	<design:attribute name="dependentfieldValue4" label="Dependent Field 4 Value"/>
+
+	<design:attribute name="dependentfieldSize1" label="Dependent Field 1 Size" description="Out of 12"/>
+	<design:attribute name="dependentfieldSize2" label="Dependent Field 2 Size" description="Out of 12"/>
+	<design:attribute name="dependentfieldSize3" label="Dependent Field 3 Size" description="Out of 12"/>
+	<design:attribute name="dependentfieldSize4" label="Dependent Field 4 Size" description="Out of 12"/>
+	<design:attribute name="controllingFieldSize" label="Control Field Size" description="Out of 12"/>
+
+	<design:attribute name="controllingFieldRequired" label="Control Field Required?"/>
+	<design:attribute name="dependentfieldRequired1" label="Dependent Field 1 Required?"/>
+	<design:attribute name="dependentfieldRequired2" label="Dependent Field 2 Required?"/>
+	<design:attribute name="dependentfieldRequired3" label="Dependent Field 3 Required?"/>
+	<design:attribute name="dependentfieldRequired4" label="Dependent Field 4 Required?"/>
+
+</design:component>

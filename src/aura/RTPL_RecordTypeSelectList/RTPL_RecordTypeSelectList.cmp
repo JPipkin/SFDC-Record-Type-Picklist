@@ -1,0 +1,67 @@
+<!-- 
+Copyright 2018 OpFocus, Inc
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+
+<aura:component >
+	
+	<aura:attribute name="properties" type="Object" access="private"/>
+	<aura:attribute name="fieldName" type="String"/>
+	<aura:attribute name="depends" type="String"/>
+	<aura:attribute name="addSelectOpt" type="Boolean" default="true"/>
+
+	<aura:attribute name="sobject" type="String"/>
+	<aura:attribute name="recordTypeId" type="String"/>
+	<aura:attribute name="recordTypeName" type="String"/>
+	<aura:attribute name="sobjectField" type="String"/>
+
+	<aura:attribute name="options" type="List" default="[]" access="private"/>
+
+
+	<aura:attribute name="name" type="string"/>
+	<aura:attribute name="value" type="string"/>
+	<aura:attribute name="variant" type="string" default="standard"/>
+	<aura:attribute name="disabled" type="boolean" default="false"/>
+	<aura:attribute name="readonly" type="boolean" default="false"/>
+	<aura:attribute name="required" type="boolean" default="false"/>
+	<aura:attribute name="validity" type="object"/>
+	<aura:attribute name="onchange" type="Object"/>
+	<aura:attribute name="accesskey" type="string"/>
+	<aura:attribute name="tabindex" type="integer"/>
+	<aura:attribute name="onfocus" type="Object"/>
+	<aura:attribute name="onblur" type="Object"/>
+	<aura:attribute name="class" type="string"/>
+	<aura:attribute name="title" type="string"/>
+	<aura:attribute name="label" type="string"/>
+	<aura:attribute name="messageWhenValueMissing" type="string"/>
+
+	<aura:handler name="change" action="{!c.init}" value="{!v.properties}" />
+	<aura:handler name="change" value="{!v.depends}" action="{!c.controlChange}"/>
+
+	<aura:method name="getSelected"/>
+
+	<c:RTPL_RecordTypePicklistValues sobject="{!v.sobject}" recordTypeName="{!v.recordTypeName}" recordTypeId="{!v.recordTypeId}" recordTypeProperties="{!v.properties}" sobjectField="{!v.sobjectField}" fieldName="{!v.fieldName}"/>
+
+	<lightning:select name="{!v.name}" value="{!v.value}" variant="{!v.variant}" disabled="{!v.disabled}" readonly="{!v.readonly}" 
+					required="{!v.required}" validity="{!v.validity}" onchange="{!v.onchange}" accesskey="{!v.accesskey}" tabindex="{!v.tabindex}" 
+					onfocus="{!v.onfocus}" onblur="{!v.onblur}" class="{!v.class}" title="{!v.title}" label="{!v.label}" 
+					messageWhenValueMissing="{!v.messageWhenValueMissing}">
+
+		<aura:iteration items="{!v.options}" var="opt">
+			<option value="{!opt.value}" selected="{!opt.selected}">{!opt.label}</option>
+		</aura:iteration>
+
+	</lightning:select>
+</aura:component>
