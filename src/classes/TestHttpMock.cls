@@ -1,9 +1,4 @@
-/* Class:       TestHttpMock
- * Created On:  
- * Created by:  J. Pipkin (OpFocus, Inc)
- * Description: Test class for Http Callout responses
- */
- 
+
 @isTest
 global class TestHttpMock implements HttpCalloutMock{
 
