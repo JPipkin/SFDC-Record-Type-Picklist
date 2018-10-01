@@ -1,10 +1,17 @@
 # Salesforce Enhanced Picklists
 
+<a href="https://githubsfdeploy.herokuapp.com?owner=JPipkin&repo=SFDC-Record-Type-Picklist">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
+</a>
+
 ## Introduction
 
 This component allows easy implementation of adding picklist fields to lightning component and visual flows that enforce Record Type visibility as well as field dependencies.
 
 ## Installation
+
+*NOTE: You must have at least 1 object with record types enabled to deploy this package to your organization.*
 
 1. Create a Connected App
 	1. Search for "App Manager" in setup
@@ -48,7 +55,7 @@ This component allows easy implementation of adding picklist fields to lightning
 
 ## Code Samples
 
-###Visual Flows
+### Visual Flows
 
 To add to visual flow, add "RTPL_FlowRecordTypeSelectList" to a screen element. This flow component supports up to 4 dependent picklists. There are 5 attributes you can set for each field:
 - Name: The field API name
@@ -63,7 +70,7 @@ There are 3 more properties that apply to the whole component:
 - recordTypeName: Record Type label. Required if recordTypeId is not supplied
 - recordTypeId: Record Type Id. Required if recordTypeName is not supplied
 
-###Lightning Components
+### Lightning Components
 
 To add to a lightning component, use "c:RTPL_RecordTypeSelectList". This component inherits all of the properties of lightning:select. Here are the additional attributes:
 - addSelectOpt: Determines if the default picklist option is "--Select--" (true) or the first picklist value (false)
@@ -75,6 +82,17 @@ To add to a lightning component, use "c:RTPL_RecordTypeSelectList". This compone
 
 There is 1 method, getSelected(), that will return the value of the field if the "value" attribute is not set. Usage:
 <pre>var selectedValue = component.find('mypicklist').getSelected();</pre>
+
+#### Build Your Own UI
+
+If you want to display the picklist values based on record type and dependencies in a different way, use the component "RTPL_RecordTypePicklistValues." This component will retrieve the 
+picklist properties and return the information. Here are the attributes:
+- sobject: SObject API Name that holds the field. Required if sobjectField is not supplied
+- recordTypeId: Record Type Id. Required if recordTypeName is not supplied
+- recordTypeName: Record Type label. Required if recordTypeId is not supplied
+- recordTypeProperties: The picklist properties returned by the User Interface API. Returns instance of RTPL_PicklistValues wrapper.
+- sobjectField: Fully qualified API name. If provided, sobject and fieldName are not used
+- fieldName: The field API name
 
 
 

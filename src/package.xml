@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>RTPL_RecordTypePicklistValuesCtrl</members>
+        <members>RTPL_RecordTypePicklistValuesCtrlTest</members>
+        <members>RTPL_PicklistValues</members>
+        <members>TestHttpMock</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>RTPL_FlowRecordTypeSelectList</members>
+        <members>RTPL_RecordTypePicklistValues</members>
+        <members>RTPL_RecordTypeSelectList</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
         <members>RTPL_Settings__c</members>
         <name>CustomObject</name>
     </types>
-    <version>42.0</version>
+    <version>44.0</version>
 </Package>

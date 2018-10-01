@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForAllPageTypes">
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId">
 	<aura:attribute name="acct1" type="Account" default="{'sobjectType':'Account'}"/>
 	<aura:attribute name="acct2" type="Account" default="{'sobjectType':'Account'}"/>
 
@@ -23,4 +23,5 @@
 			</lightning:layout>
 		</div>
 	</div>
+	
 </aura:component>
