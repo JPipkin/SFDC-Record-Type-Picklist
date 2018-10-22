@@ -27,8 +27,9 @@ This component allows easy implementation of adding picklist fields to lightning
 	2. Click "New"
 	3. Set "Provider Type" to "Salesforce"
 	4. Populate "Name" and "URL Suffix" with whatever you would like
-	5. Click "Save"
-	6. Copy the generated "Callback URL"
+	5. Populate "Consumer Key" and "Consumer Secret" with values from #1
+	6. Click "Save"
+	7. Copy the generated "Callback URL"
 3. Update Connected App callback URL
 	1. Go back to the connected app from step #1
 	2. Update the callback url with the callback url from the Auth Provider in step #2
@@ -36,7 +37,7 @@ This component allows easy implementation of adding picklist fields to lightning
 	1. Search for "Named Credentials" in setup
 	2. Click "New Named Credential"
 	3. Fill out the Label with whatever name you would like to give it
-	4. The "URL" should be the base url of your org. For example: https://mydomain.my.salesforce.com
+	4. The "URL" should be the base url of your org. Format: https://[mydomain].my.salesforce.com, https://[instance].salesforce.com
 	5. Set "Identity Type" to "Named Principal"
 	6. Set "Authentication Protocol" to "OAuth 2.0"
 	7. Set "Authentication Provider" to the Auth Provider you created in step #2
