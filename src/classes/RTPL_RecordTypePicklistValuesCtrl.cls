@@ -45,8 +45,13 @@ public with sharing class RTPL_RecordTypePicklistValuesCtrl {
 
 			req.setEndpoint('callout:' + settings.Named_Credential__c + '/services/data/v' + settings.Api_Version__c + '/ui-api/object-info/' + sobjectName + '/picklist-values/' + recordTypeId);
 			req.setMethod('GET');
+			//req.setHeader('ETag', '4cf7c7c86e72b26d1da489c1b9b1ec99=-gzip');
+			req.setHeader('If-Unmodified-Since', 'Tue, 10 Aug 2015 00:00:00 GMT');
 
 			HttpResponse res = new Http().send(req);
+			for(String h : res.getHeaderKeys()){
+				System.debug(h + ' => ' + res.getHeader(h));
+			}
 			RTPL_PicklistValues pl = (RTPL_PicklistValues) JSON.deserialize(res.getBody(), RTPL_PicklistValues.class);
 			System.debug(JSON.serialize(pl));
 			return JSON.serialize(pl);

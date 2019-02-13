@@ -5,6 +5,10 @@
 
 		// get field information from UI api
 		properties = properties[component.get('v.fieldName')];
+		if(!properties){
+			console.error(component.get('v.fieldName') + ' does not exist');
+			return;
+		}
 
 		// init info
 		var controllerValue = component.get('v.depends');

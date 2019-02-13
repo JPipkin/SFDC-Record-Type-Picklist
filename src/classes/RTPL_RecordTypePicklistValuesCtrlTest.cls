@@ -123,9 +123,9 @@ public class RTPL_RecordTypePicklistValuesCtrlTest {
 	//test methods
 
 	static testMethod void myTest1() {
-		RecordType[] lstRT = [Select Id, Name from RecordType LIMIT 1];
+		RecordType[] lstRT = [Select Id, Name, SobjectType from RecordType LIMIT 1];
 		Test.setMock(HttpCalloutMock.class, new TestHttpMock(testResponse));
-		String res = RTPL_RecordTypePicklistValuesCtrl.getPicklistValues('Account',lstRT[0].Id,null);
+		String res = RTPL_RecordTypePicklistValuesCtrl.getPicklistValues(lstRT[0].SobjectType,lstRT[0].Id,null);
 		RTPL_PicklistValues pl = (RTPL_PicklistValues) JSON.deserialize(res, RTPL_PicklistValues.class);
 		System.assert(pl.picklistFieldValues.containsKey('Controller__c'));
 		RTPL_PicklistValues.PicklistValues plv = pl.picklistFieldValues.get('Controller__c');
@@ -139,9 +139,9 @@ public class RTPL_RecordTypePicklistValuesCtrlTest {
 	}
 	
 	static testMethod void myTest2() {
-		RecordType[] lstRT = [Select Id, Name from RecordType LIMIT 1];
+		RecordType[] lstRT = [Select Id, Name, SobjectType from RecordType LIMIT 1];
 		Test.setMock(HttpCalloutMock.class, new TestHttpMock(testResponse));
-		String res = RTPL_RecordTypePicklistValuesCtrl.getPicklistValues('Account',null, lstRT[0].Name);
+		String res = RTPL_RecordTypePicklistValuesCtrl.getPicklistValues(lstRT[0].SobjectType,null, lstRT[0].Name);
 		RTPL_PicklistValues pl = (RTPL_PicklistValues) JSON.deserialize(res, RTPL_PicklistValues.class);
 		System.assert(pl.picklistFieldValues.containsKey('Controller__c'));
 		RTPL_PicklistValues.PicklistValues plv = pl.picklistFieldValues.get('Controller__c');
@@ -168,9 +168,9 @@ public class RTPL_RecordTypePicklistValuesCtrlTest {
 	}
 
 	static testMethod void myTest4(){
-		RecordType[] lstRT = [Select Id, Name from RecordType LIMIT 1];
+		RecordType[] lstRT = [Select Id, Name, SobjectType from RecordType LIMIT 1];
 		try{
-			RTPL_RecordTypePicklistValuesCtrl.getPicklistValues('Accounts',null, lstRT[0].Name);
+			RTPL_RecordTypePicklistValuesCtrl.getPicklistValues(lstRT[0].SobjectType + 's',null, lstRT[0].Name);
 			System.assert(false);
 		}
 		catch(RTPL_RecordTypePicklistValuesCtrl.RecordTypeValuesCtrlException ce){
