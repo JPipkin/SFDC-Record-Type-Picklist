@@ -28,7 +28,7 @@
 				class : component.get('v.dependentfieldSize1') ? 'slds-size_' + component.get('v.dependentfieldSize1') + '-of-12' : ''
 			}]);
 		}
-		else if(component.get('v.dependentfieldName2')){
+		if(component.get('v.dependentfieldName2')){
 			componentArray.push(["c:RTPL_RecordTypeSelectList",{
 				sobject: component.get('v.sobject'),
 				recordTypeId: component.get('v.recordTypeId'),
@@ -42,7 +42,7 @@
 				class : component.get('v.dependentfieldSize2') ? 'slds-size_' + component.get('v.dependentfieldSize2') + '-of-12' : ''
 			}]);
 		}
-		else if(component.get('v.dependentfieldName3')){
+		if(component.get('v.dependentfieldName3')){
 			componentArray.push(["c:RTPL_RecordTypeSelectList",{
 				sobject: component.get('v.sobject'),
 				recordTypeId: component.get('v.recordTypeId'),
@@ -56,7 +56,7 @@
 				class : component.get('v.dependentfieldSize3') ? 'slds-size_' + component.get('v.dependentfieldSize3') + '-of-12' : ''
 			}]);
 		}
-		else if(component.get('v.dependentfieldName4')){
+		if(component.get('v.dependentfieldName4')){
 			componentArray.push(["c:RTPL_RecordTypeSelectList",{
 				sobject: component.get('v.sobject'),
 				recordTypeId: component.get('v.recordTypeId'),
