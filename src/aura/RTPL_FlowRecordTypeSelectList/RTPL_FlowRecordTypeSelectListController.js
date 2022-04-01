@@ -101,7 +101,7 @@
 			if (!isValid){
 				return {
 					isValid: false,
-					errorMessage: 'error message'
+					errorMessage: 'Please select an option in all required fields'
 				}
 			}
 
