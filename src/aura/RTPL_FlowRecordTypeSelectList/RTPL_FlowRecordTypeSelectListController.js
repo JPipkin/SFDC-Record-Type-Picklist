@@ -71,6 +71,31 @@
 			}]);
 		}
 
+		component.set('v.validate', function () {
+			let isValid = true;
+			if (component.get('v.controllingFieldRequired') && $A.util.isEmpty(component.get('v.controllingFieldValue'))) {
+				isValid = false;
+			}
+			if (component.get('v.dependentfieldName1') && component.get('v.dependentfieldRequired1') && $A.util.isEmpty(component.get('v.dependentfieldValue1'))){
+				isValid = false;
+			}
+			if (component.get('v.dependentfieldName2') && component.get('v.dependentfieldRequired2') && $A.util.isEmpty(component.get('v.dependentfieldValue2'))){
+				isValid = false;
+			}
+			if (component.get('v.dependentfieldName3') && component.get('v.dependentfieldRequired3') && $A.util.isEmpty(component.get('v.dependentfieldValue3'))){
+				isValid = false;
+			}
+			if (component.get('v.dependentfieldName4') && component.get('v.dependentfieldRequired4') && $A.util.isEmpty(component.get('v.dependentfieldValue4'))){
+				isValid = false;
+			}
+			if (!isValid){
+				return {
+					isValid: false,
+					errorMessage: 'Please select an option in all required fields'
+				}
+			}
+		});
+
 		$A.createComponents(componentArray, function(components, status, msg){
 			if(status === 'SUCCESS'){
 				component.find('pl_container').set('v.body', components);

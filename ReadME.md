@@ -1,6 +1,6 @@
 # Salesforce Enhanced Picklists
 
-<a href="https://githubsfdeploy.herokuapp.com?owner=JPipkin&repo=SFDC-Record-Type-Picklist">
+<a href="https://githubsfdeploy.herokuapp.com?owner=Garywoo&repo=SFDC-Record-Type-Picklist">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
