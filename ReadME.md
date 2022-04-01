@@ -21,18 +21,18 @@ This component allows easy implementation of adding picklist fields to lightning
 	5. Populate "Callback URL" with "https://login.salesforce.com" (we will change this later)
 	6. Choose OAuth Scopes: Full Access (full), Perform requests on your behalf at any time (refresh_token, offline_access)
 	7. Click "Save"
-	8. Note the "Consumer Key" and "Consumer Secret" for step \#2
+	8. Note the "Consumer Key" and "Consumer Secret" for step 2
 2. Create an Auth Provider
 	1. Search for "Auth. Providers" in setup
 	2. Click "New"
 	3. Set "Provider Type" to "Salesforce"
 	4. Populate "Name" and "URL Suffix" with whatever you would like
-	5. Populate "Consumer Key" and "Consumer Secret" with values from \#1
+	5. Populate "Consumer Key" and "Consumer Secret" with values from step 1
 	6. Click "Save"
 	7. Copy the generated "Callback URL"
 3. Update Connected App callback URL
-	1. Go back to the connected app from step \#1
-	2. Update the callback url with the callback url from the Auth Provider in step \#2
+	1. Go back to the connected app from step 1
+	2. Update the callback url with the callback url from the Auth Provider in step 2
 4. Create a Named Credential
 	1. Search for "Named Credentials" in setup
 	2. Click "New Named Credential"
@@ -40,7 +40,7 @@ This component allows easy implementation of adding picklist fields to lightning
 	4. The "URL" should be the base url of your org. Format: https://[mydomain].my.salesforce.com, https://[instance].salesforce.com
 	5. Set "Identity Type" to "Named Principal"
 	6. Set "Authentication Protocol" to "OAuth 2.0"
-	7. Set "Authentication Provider" to the Auth Provider you created in step \#2
+	7. Set "Authentication Provider" to the Auth Provider you created in step 2
 	8. Set "Scope" to "full refresh_token offline_access"
 	9. Check the "Start Authentication Flow on Save"
 	10. Under "Callout Options" select "Generate Authorization Header" and "Allow Merge Fields in HTTP Body"
@@ -50,7 +50,7 @@ This component allows easy implementation of adding picklist fields to lightning
 	1. Search for "Custom Settings" in setup
 	2. Next to "RTPL Settings", click "Manage"
 	3. Above "Default Organization Level Value" section, click "New"
-	4. Set "Named Credential" to the API name of the Named Credential you created in step \#4
+	4. Set "Named Credential" to the API name of the Named Credential you created in step 4
 	5. Set "Api Version" to the api version of the salesforce User Interface API you would like to use. (Currently 44.0)
 	6. Click "Save"
 
