@@ -52,6 +52,8 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	<aura:attribute name="dependentfieldSize4" type="String"/>
 	<aura:attribute name="dependentfieldRequired4" type="Boolean"/>
 
+	<aura:attribute name="validate" type="Aura.Action"/>
+
 	<aura:handler name="init" action="{!c.init}" value="{!this}"/>
 
 
